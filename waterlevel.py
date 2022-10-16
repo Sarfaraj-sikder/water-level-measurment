@@ -9,7 +9,7 @@ except:
   file = pd.DataFrame(columns=['Measuring point','Timestamp','Waterlevel(cm)'])
   file.to_csv('output.csv')
 
-while True:
+
   stations = [
     {
       'name': 'SEEMANNSH%C3%96FT',
@@ -27,7 +27,8 @@ while True:
 
   ids = ",".join(station["id"] for station in stations)
   url = 'https://pegelonline.wsv.de/webservices/rest-api/v2/stations.json?ids={}&includeTimeseries=true&includeCurrentMeasurement=true'.format(ids)
-
+  
+while True:
   api_response = requests.get(url).json()
 
   df = pd.json_normalize(api_response)
