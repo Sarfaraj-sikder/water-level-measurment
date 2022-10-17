@@ -8,7 +8,7 @@ This is a rest API based project using python which measures water level and aut
 ## Installation
 Language- Python3;
 library- requests, pandas;
-SMTP module: yagmail
+SMTP module: yagmail.
 For easy installation of all the required modules and libraries you can install the requirement.txt file in your terminal before running the code.
     
 ## API Reference
